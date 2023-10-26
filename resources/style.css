@@ -9,12 +9,50 @@ a:active {
 }
 
 body {
+  box-sizing: border-box;
   width: 100%;
   height: 100%;
   padding: 0;
   margin: 0;
   overflow: auto;
 }
+
+footer {
+  display: flex;
+  flex-direction: row;
+  max-width: 800px;
+  margin: 0 auto;
+
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 10px;
+  color: lightslategrey;
+}
+
+footer > section {
+  font-size: small;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 20px auto;
+  padding: 50px;
+  overflow: auto;
+}
+
+img.site-logo {
+  width: 128px;
+  height: 128px;
+  margin: 25px;
+}
+
+img.thumbnail {
+  width: 213px;
+  height: 120px;
+  border-radius: 7px;
+}
+
+h1.site-title {
+  margin: 30px 80px;
+}
+
 header {
   display: flex;
   position: fixed;
@@ -26,40 +64,60 @@ header {
   font-family: Love Ya Like A Sister, Sans Serif;
   font-size: 48px;
 }
-img.site-logo {
-  width: 128px;
-  height: 128px;
-  margin: 25px;
-}
-h1.site-title {
-  margin: 30px 80px;
-}
 
 main {
-  /*display: flex;
-  flex-direction: row;*/
   width: 100%;
   padding: 0;
   height: 100%;
   margin-top: 180px;
 }
-footer {
-  display: flex;
-  flex-direction: row;
-  max-width: 800px;
-  margin: 0 auto;
 
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 10px;
-  color: lightslategrey;
-}
-footer > section {
+p.image-placeholder {
+  width: 213px;
+  height: 120px;
+  margin: 0;
+  background-color: gainsboro;
+  border-radius: 0.6em;
   font-size: small;
-  text-align: center;
-  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section > article > p,
+section > article > h2 {
+  margin: 20px;
+}
+
+.ad-sideboard {
+  background-color: white;
+  width: 100%;
+  margin: 25px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.ad-sideboard-container {
+  float: right;
+  display: flex;
+  height: 100%;
+
+  visibility: hidden;
+}
+
+.content-article {
   margin: 20px auto;
   padding: 50px;
   overflow: auto;
+  
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 24px;
+}
+
+.content-block {
+  max-width: 1000px;
+  margin: 20px auto;
 }
 
 .cover-photo {
@@ -72,61 +130,6 @@ footer > section {
   background-position: center;
   background-size: cover;
 }
-.card {
-  box-sizing: border-box;
-  /*max-width: 1000px;*/
-  margin: 20px auto;
-  padding: 50px;
-  overflow: auto;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 24px;
-}
-section > article > p,
-section > article > h2 {
-  margin: 20px;
-}
-
-.vertical-stackpanel > section:nth-child(odd) {
-  background-color: burlywood;
-}
-
-.vertical-stackpanel > section:nth-child(even),
-.footer-container {
-  background-color: white;
-  box-shadow: inset 0.3em 0.3em 1em burlywood;
-}
-
-.greencard {
-  background-color: mediumseagreen;
-}
-.whitecard {
-  background-color: white;
-  border: solid brown 3px;
-}
-
-p.image-placeholder {
-  width: 213px;
-  height: 120px;
-  margin: 10px;
-  background-color: gainsboro;
-  border-radius: 0.6em;
-  font-size: small;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-p.content-block {
-  max-width: 1000px;
-  margin: 20px auto;
-}
-
-.vertical-stackpanel {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding: 0;
-  text-align: center;
-}
 
 .item-tray {
   display: flex;
@@ -134,6 +137,7 @@ p.content-block {
 
   justify-content: center;
 }
+
 .item-tray-item {
   display: flex;
   flex-direction: column;
@@ -147,24 +151,22 @@ p.content-block {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-img.thumbnail {
-  width: 213px;
-  height: 120px;
-  border-radius: 7px;
-}
-
-.ad-sideboard-container {
-  float: right;
-  display: flex;
-  height: 100%;
-}
-.ad-sideboard {
-  background-color: white;
-  width: 100%;
-  margin: 25px;
-  padding: 20px;
+.vertical-stackpanel {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  padding: 0;
+  text-align: center;
+}
+
+.vertical-stackpanel > section:nth-child(even),
+.footer-container {
+  background-color: white;
+  box-shadow: inset 0.3em 0.3em 1em burlywood;
+}
+
+.vertical-stackpanel > section:nth-child(odd) {
+  background-color: burlywood;
 }
 
 *,
