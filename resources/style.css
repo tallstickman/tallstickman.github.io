@@ -169,6 +169,9 @@ max-width: 1200px;
   background-image: url("mannor.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
+  @supports (-webkit-touch-callout: inherit) {
+    background-attachment: scroll;
+  }
   background-position: center;
   background-size: cover;
 }
