@@ -158,22 +158,30 @@ ul li {
 }
 
 .content-image {
-width: 100%;
-max-width: 1200px;
+  width: 100%;
+  max-width: 1200px;
 }
 
 .cover-photo {
   width: 100%;
-  height: 600px;
+  height: 50vh;
 
   background-image: url("mannor.png");
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  @supports (-webkit-touch-callout: inherit) {
-    background-attachment: scroll;
-  }
+  /* background-attachment: fixed; */
+  position: fixed;
+  z-index: -1;
   background-position: center;
   background-size: cover;
+}
+/* @supports (-webkit-touch-callout: inherit) {
+  .cover-photo {
+    background-attachment: scroll;
+  }
+} */
+
+.content-wrapper {
+margin-top: 50vh
 }
 
 .footer-container {
@@ -222,13 +230,13 @@ max-width: 1200px;
   text-align: center;
 }
 
-.vertical-stackpanel > section:nth-child(even),
+.content-wrapper > section:nth-child(odd),
 .footer-container {
   background-color: white;
   box-shadow: inset 0.3em 0.3em 1em burlywood;
 }
 
-.vertical-stackpanel > section:nth-child(odd) {
+.vertical-stackpanel > section:nth-child(even) {
   background-color: burlywood;
 }
 
@@ -239,9 +247,9 @@ max-width: 1200px;
 }
 
 @media (max-width: 850px) {
-  .cover-photo {
+  /* .cover-photo {
     background-attachment: local;
-  }
+  } */
 
   div.youtube-card {
     height: 540px;
@@ -255,7 +263,7 @@ max-width: 1200px;
     width: 426px;
     height: 240px;
   }
-      
+
   img.site-logo {
     width: 64px;
     height: 64px;
@@ -274,7 +282,7 @@ max-width: 1200px;
     top: -225px;
     font-size: 2.4em;
   }
-  }
+}
 
 @media (max-width: 600px) {
   div.youtube-card {
@@ -285,12 +293,12 @@ max-width: 1200px;
     width: 213px;
     height: 120px;
   }
-      
+
   p.youtube-card-play-button {
     top: -115px;
     font-size: 1.2em;
   }
-  
+
   .ad-sideboard {
     flex-direction: row;
     width: 100%;
@@ -303,7 +311,7 @@ max-width: 1200px;
     width: 100%;
     height: auto;
   }
-  .cover-photo {
+  /* .cover-photo {
     height: 540px;
-  }
+  } */
 }
